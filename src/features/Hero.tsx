@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import { fadeUp, staggerContainer } from "@/lib/animations"
-import { Button } from "../components/ui/button"
+import { Button } from "@/components/ui/button"
 import { SparkleIcon } from "lucide-react"
 
 const Hero = () => {

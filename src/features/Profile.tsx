@@ -9,7 +9,7 @@ const Profile = () => {
                     <h1 className="text-3xl font-bold">Vibhu Rathore</h1>
                     <p className="text-sm">Full Stack Engineer</p>
                 </div>
-                <img src='/public/Image.jpeg' alt="vibhuRathore" className="lg:w-96 rounded-2xl object-cover" />
+                <img src='/Image.jpeg' alt="vibhuRathore" className="lg:w-96 rounded-2xl object-cover" />
 
                 <div className="mt-6">
                     <p className="text-sm text-neutral-300">Specialization :</p>
