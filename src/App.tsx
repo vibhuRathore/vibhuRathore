@@ -2,6 +2,7 @@ import Hero from "./features/Hero"
 import Projects from "@/features/projects/Projects"
 import Stats from "./features/stats/Stats"
 import About from "./features/About"
+import Resume from "./features/Resume/Resume"
 // import Services from "./features/Services/Services"
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
        <Projects/>
        <About/>
        {/* <Services/> */}
+       <Resume/>
     </main>
   )
 }
