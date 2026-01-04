@@ -2,6 +2,7 @@ import Hero from "./features/Hero"
 import Projects from "@/features/projects/Projects"
 import Stats from "./features/stats/Stats"
 import About from "./features/About"
+// import Services from "./features/Services/Services"
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
        <Stats/>
        <Projects/>
        <About/>
+       {/* <Services/> */}
     </main>
   )
 }

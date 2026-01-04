@@ -7,11 +7,9 @@ const About = () => {
   return (
     <motion.section initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.3 }} variants={staggerContainer(0)} className="mt-30 scroll-mt-10" id="about">
 
-      <SectionHeader subtitle="About" title="Write some heading here" />
+      <SectionHeader subtitle="About" title="👋 Hi there !!!" />
 
       <motion.p variants={fadeUp} className="mt-2 text-neutral-300">
-        👋 Hi there !!!<br />
-
         I’m a passionate Full Stack Engineer with around 1 year of hands-on experience building and optimizing web applications that solve real-world problems. Currently, I’m working at Ficode Software Solutions, where I’m involved in developing high-performing applications, contributing to impactful projects, and continuously learning new technologies.<br /><br />
 
         🌟 What sets me apart?<br />
