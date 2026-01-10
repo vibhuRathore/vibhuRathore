@@ -20,7 +20,7 @@ const Hero = () => {
                     <a href="#projects">My Projects</a>
                 </Button>
 
-                <Button variant='outline'>Downlaod Cv</Button>
+                <Button variant='outline'>Download Cv</Button>
 
             </motion.div>
 

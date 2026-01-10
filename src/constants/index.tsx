@@ -6,7 +6,6 @@ import type {
   LinksType,
   ServiceType,
   TestimonialsType,
-  ToolsType,
 } from '@/types';
 
 /**
@@ -80,74 +79,46 @@ const socialLinks: LinksType[] = [
 
 const education: ExperienceType[] = [
   {
-    year: '2018 – 2020',
-    title: 'Bachelor of Computer Science',
-    institute: 'National University of Technology',
-    desc: 'Focused on front-end development, UI design, and web application architecture.',
+    year: '2019 – 2024',
+    title: 'Bachelor of Engineering',
+    institute: 'Computer Science & Engineering ( Internet of things)',
+    desc: '',
   },
   {
-    year: '2021 – 2022',
-    title: 'Frontend Development Bootcamp',
-    institute: 'Udemy / Online Course',
-    desc: 'Learned modern JavaScript, React, and responsive UI patterns through real-world projects.',
+    year: '2018 – 2019',
+    title: 'Intermediate',
+    institute: 'Spring Fields College, Moradabad, Uttar Pradesh',
+    desc: '',
   },
   {
-    year: '2023',
-    title: 'Advanced UI/UX Design Course',
-    institute: 'Design+Code',
-    desc: 'Explored advanced design systems, motion design, and accessibility best practices.',
+    year: '2016-2017',
+    title: 'Matriculation',
+    institute: 'Spring Fields College, Moradabad, Uttar Pradesh',
+    desc: '',
   },
 ];
 
 const experience: ExperienceType[] = [
   {
-    year: '2021 – 2022',
-    title: 'Frontend Developer Intern',
-    institute: 'PixelForge Studio',
-    desc: 'Built and optimized responsive websites, collaborating closely with designers and backend teams.',
+    year: 'Sept 2025 – Present',
+    title: 'Full Stack Engineer',
+    institute: 'Ficode India',
+    desc: '',
   },
   {
-    year: '2022 – Present',
-    title: 'UI Engineer',
+    year: 'Aug 2024 – April 2025',
+    title: 'Full Stack Engineer',
     institute: 'Freelance / Remote Work',
-    desc: 'Designed and developed web interfaces for SaaS startups using React, Tailwind, and Figma.',
+    desc: '',
   },
+  {
+    year: 'Jan 2024 – July 2024',
+    title: 'Full Stack Engineer',
+    institute: 'GrayCell Technologies',
+    desc: '',
+  }
 ];
 
-const tools: ToolsType[] = [
-  {
-    label: 'Figma',
-    imgSrc: '/images/tools/figma.svg',
-  },
-  {
-    label: 'CSS',
-    imgSrc: '/images/tools/css3.svg',
-  },
-  {
-    label: 'Tailwind CSS',
-    imgSrc: '/images/tools/tailwindcss.svg',
-  },
-  {
-    label: 'React',
-    imgSrc: '/images/tools/react.svg',
-  },
-  {
-    label: 'JavaScript',
-    imgSrc: '/images/tools/javascript.svg',
-  },
-  {
-    label: 'Node.js',
-    imgSrc: '/images/tools/nodejs.svg',
-  },
-  {
-    label: 'Express.js',
-    imgSrc: '/images/tools/expressjs.svg',
-  },
-  {
-    label: 'Mongodb',
-    imgSrc: '/images/tools/mongodb.svg',
-  },
-];
 
 const services: ServiceType[] = [
   {
@@ -210,7 +181,6 @@ export {
   socialLinks,
   education,
   experience,
-  tools,
   services,
   navLinks,
   testimonials,
