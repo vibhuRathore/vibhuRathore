@@ -4,7 +4,7 @@ import Stats from "./features/stats/Stats"
 import About from "./features/About"
 import Resume from "./features/Resume/Resume"
 import Tools from "./features/Tools/Tool"
-// import Services from "./features/Services/Services"
+import Services from "./features/Services/Services"
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
        <Stats/>
        <Projects/>
        <About/>
-       {/* <Services/> */}
+       <Services/>
        <Resume/>
        <Tools/>
     </main>
