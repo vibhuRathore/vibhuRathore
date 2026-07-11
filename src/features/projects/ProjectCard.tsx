@@ -1,9 +1,9 @@
 import { fadeUp } from "@/lib/animations"
 import { motion } from "motion/react"
 import type { ProjectType } from "@/types"
+import { Button } from "@/components/ui/button"
 
-//will add the project link later
-const ProjectCard = ({imgSrc,tags, title}: ProjectType) => {
+const ProjectCard = ({imgSrc,tags, title, desc, projectLink}: ProjectType) => {
   return (
     <motion.div variants={fadeUp} className="relative">
        <figure className="overflow-hidden rounded-md">
@@ -16,6 +16,16 @@ const ProjectCard = ({imgSrc,tags, title}: ProjectType) => {
                 <span key={i} className="bg-background hover:bg-primary hover:text-black py-1 px-2 rounded-sm text-sm cursor-pointer">{tag}</span>
             ))
         }
+       </div>
+
+       <div className="mt-4">
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <p className="mt-2 text-sm text-neutral-300">{desc}</p>
+        <Button asChild className="mt-4">
+          <a href={projectLink} target="_blank" rel="noreferrer">
+            View Project
+          </a>
+        </Button>
        </div>
     </motion.div>
   )

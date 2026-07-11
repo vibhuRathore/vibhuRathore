@@ -12,7 +12,7 @@ const Projects = () => {
        <motion.div initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.3 }} variants={staggerContainer(0.5)} className="grid md:grid-cols-2 gap-10 mt-10">
 
         {projectsData.map((project,i)=>(
-            <ProjectCard key={i} imgSrc={project.imgSrc} projectLink={project.projectLink} title={project.title} tags={project.tags}/>
+            <ProjectCard key={i} imgSrc={project.imgSrc} projectLink={project.projectLink} title={project.title} desc={project.desc} tags={project.tags}/>
         ))}
         
        </motion.div>
