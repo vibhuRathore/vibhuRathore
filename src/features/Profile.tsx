@@ -9,12 +9,12 @@ const Profile = () => {
                     <h1 className="text-3xl font-bold">Vibhu Rathore</h1>
                     <p className="text-sm">Full Stack Engineer</p>
                 </div>
-                <img src='/Image.jpeg' alt="vibhuRathore" className="lg:w-96 rounded-2xl object-cover" />
+                <img src='/Image.jpeg' alt="Vibhu Rathore portrait" className="lg:w-96 rounded-2xl object-cover" />
 
                 <div className="mt-6">
                     <p className="text-sm text-neutral-300">Specialization :</p>
 
-                    <p className="text-lg capitalize">Full Stack developement</p>
+                    <p className="text-lg capitalize">Full Stack development</p>
                 </div>
                 <div>
                     <p className="text-sm text-neutral-300">Based In :</p>
@@ -26,7 +26,7 @@ const Profile = () => {
                     {socialLinks.map((social, i) => {
                         const Icon = social.icon;
                         return (
-                            <a key={i} href={social.link} className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary transition duration-200">
+                            <a key={i} href={social.link} aria-label={social.label} className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 transition duration-200">
                                 <Icon className='size-6' />
                             </a>
                         )

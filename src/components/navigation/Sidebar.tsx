@@ -15,6 +15,7 @@ const Sidebar = () => {
           variant="ghost"
           size="icon"
           className="m-4 fixed top-4 right-4 z-50 border-2 hover:border-primary bg-neutral-800 py-5 px-5 rounded-full hover:text-primary cursor-pointer"
+          aria-label="Open menu"
         >
           <MenuIcon size={30} />
         </Button>
@@ -31,8 +32,9 @@ const Sidebar = () => {
                 key={link.label}
                 href={link.link}
                 onClick={() => setActive(link.link)}
+                aria-label={link.label}
                 className={cn(
-                  'text-neutral-300 flex items-center gap-2 hover:text-primary transition-colors duration-200 text-base',
+                  'text-neutral-300 flex items-center gap-2 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 transition-colors duration-200 text-base',
                   active === link.link && 'text-primary'
                 )}
               >
@@ -51,7 +53,8 @@ const Sidebar = () => {
                 <a
                   key={i}
                   href={social.link}
-                  className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary transition duration-200"
+                  aria-label={social.label}
+                  className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 transition duration-200"
                 >
                   <Icon className="size-4" />
                 </a>
