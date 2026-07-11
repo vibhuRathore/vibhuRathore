@@ -20,13 +20,13 @@ import {
   Instagram,
   Layers,
   Mail,
-  MessageCircle,
   Palette,
   Rocket,
   Settings,
   Smartphone,
   Twitter,
   User,
+  Wrench,
   Youtube,
 } from 'lucide-react';
 
@@ -45,9 +45,9 @@ const navLinks: LinksType[] = [
   },
   { label: 'Resume', link: '#resume', icon: FileText },
   {
-    label: 'Reviews',
-    link: '#testimonials',
-    icon: MessageCircle,
+    label: 'Tools',
+    link: '#tools',
+    icon: Wrench,
   },
   { label: 'Contact', link: '#contact', icon: Mail },
 ];

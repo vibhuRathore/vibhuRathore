@@ -6,7 +6,7 @@ import { tools } from "./tool.data"
 
 const Tools = () => {
     return (
-        <motion.section initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.3 }} variants={staggerContainer(0)} className="mt-30 scroll-mt-10" id="resume">
+        <motion.section initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.3 }} variants={staggerContainer(0)} className="mt-30 scroll-mt-10" id="tools">
 
             <SectionHeader subtitle="" title="Education and practical experience" />
             <div className="my-16">
