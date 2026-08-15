@@ -6,22 +6,19 @@ import type {
   LinksType,
   TestimonialsType,
 } from '@/types';
+import { socialLinks } from './socials';
 
 /**
  * Assets
  */
 import {
   Briefcase,
-  Facebook,
   FileText,
   Home,
-  Instagram,
   Mail,
   Settings,
-  Twitter,
   User,
   Wrench,
-  Youtube,
 } from 'lucide-react';
 
 const navLinks: LinksType[] = [
@@ -45,31 +42,6 @@ const navLinks: LinksType[] = [
   },
   { label: 'Contact', link: '#contact', icon: Mail },
 ];
-
-const socialLinks: LinksType[] = [
-  {
-    icon: Facebook,
-    label: 'Facebook',
-    link: '/#',
-  },
-  {
-    icon: Instagram,
-    label: 'Instagram',
-    link: '/#',
-  },
-  {
-    icon: Twitter,
-    label: 'Twitter',
-    link: '/#',
-  },
-  {
-    icon: Youtube,
-    label: 'Youtube',
-    link: '/#',
-  },
-];
-
-
 
 const education: ExperienceType[] = [
   {
@@ -114,29 +86,8 @@ const experience: ExperienceType[] = [
 ];
 
 
-const testimonials: TestimonialsType[] = [
-  {
-    name: 'Alex Tomato',
-    role: 'Brand Manager at Instant Design',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
-    text: 'Working with David was an absolute pleasure. His attention to detail, creative insights, and ability to translate complex ideas into stunning visuals truly set him apart. He consistently went above and beyond to ensure the project exceeded expectations.',
-    link: '#',
-  },
-  {
-    name: 'Sara Bloom',
-    role: 'Founder at Bloom Agency',
-    image: 'https://randomuser.me/api/portraits/women/65.jpg',
-    text: 'David brought my brand vision to life better than I could have imagined. He is not only professional and highly skilled but also incredibly responsive and collaborative. Every aspect of the project was handled with precision and creativity.',
-    link: '#',
-  },
-  {
-    name: 'John Park',
-    role: 'CEO at PixelFlow',
-    image: 'https://randomuser.me/api/portraits/men/45.jpg',
-    text: 'From UI/UX design to front-end implementation, David handled every detail flawlessly. His problem-solving skills, innovative approach, and dedication made the entire process smooth and enjoyable. I would highly recommend him for any design-driven project.',
-    link: '#',
-  },
-];
+// TODO: replace with real client testimonials before enabling the section.
+const testimonials: TestimonialsType[] = [];
 
 export {
   socialLinks,

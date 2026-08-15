@@ -49,7 +49,7 @@ const Sidebar = () => {
           <div className="flex gap-3 text-neutral-500">
             {socialLinks.map((social, i) => {
               const Icon = social.icon;
-              return (
+              return social.link ? (
                 <a
                   key={i}
                   href={social.link}
@@ -58,6 +58,15 @@ const Sidebar = () => {
                 >
                   <Icon className="size-4" />
                 </a>
+              ) : (
+                <span
+                  key={i}
+                  aria-label={`${social.label} profile unavailable`}
+                  aria-disabled="true"
+                  className="border-2 border-neutral-500 p-2 rounded-full opacity-40"
+                >
+                  <Icon className="size-4" />
+                </span>
               );
             })}
           </div>

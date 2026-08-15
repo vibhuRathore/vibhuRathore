@@ -10,9 +10,9 @@ const Hero = () => {
                 <SparkleIcon size={15} /> <span>Introduction</span>
             </motion.p>
 
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-4xl md:leading-16">
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-4xl md:leading-16">
                 I'm <span className="text-primary">Vibhu Rathore,</span> Full Stack Engineer
-            </motion.h1>
+            </motion.h2>
 
             <motion.div variants={fadeUp} className="mt-5 flex gap-2">
 

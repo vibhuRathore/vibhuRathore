@@ -6,6 +6,9 @@ import Resume from "./features/Resume/Resume"
 import Tools from "./features/Tools/Tool"
 import Services from "./features/Services/Services"
 import Contact from "./features/Contact"
+import Testimonials from "./features/Testimonials"
+
+const SHOW_TESTIMONIALS = false
 
 const App = () => {
   return (
@@ -17,6 +20,7 @@ const App = () => {
        <Services/>
        <Resume/>
        <Tools/>
+       {SHOW_TESTIMONIALS ? <Testimonials/> : null}
        <Contact/>
     </main>
   )

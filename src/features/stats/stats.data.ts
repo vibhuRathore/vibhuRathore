@@ -2,15 +2,15 @@ import type { StatsType } from '@/types';
 
 export const statsData: StatsType[] = [
     {
-        number: '30+',
-        label: 'Happy Clients',
+        number: '--',
+        label: 'Client Relationships',
     },
     {
-        number: '05+',
-        label: 'Years Of Experience',
+        number: '--',
+        label: 'Experience',
     },
     {
-        number: '50+',
-        label: 'Projects Done',
+        number: '--',
+        label: 'Projects',
     },
 ];

@@ -11,31 +11,31 @@ export const services: ServiceType[] = [
     {
       title: 'Brand Identity',
       desc: 'I craft modern visual identities that help brands stand out through strong typography, colors, and minimal design.',
-      projects: '32 Projects',
+      projects: 'Available for scoped work',
       icon: <Palette className='h-6 w-6 text-green-400' />,
     },
     {
       title: 'UI/UX Design',
       desc: 'Designing clean, intuitive, and user-friendly interfaces that improve user experience and boost conversions.',
-      projects: '47 Projects',
+      projects: 'Interface design support',
       icon: <Layers className='h-6 w-6 text-green-400' />,
     },
     {
       title: 'Web Development',
       desc: 'Building high-performance, SEO-friendly websites using Next.js, Tailwind, and modern web technologies.',
-      projects: '58 Projects',
+      projects: 'Frontend and backend delivery',
       icon: <Globe className='h-6 w-6 text-green-400' />,
     },
     {
       title: 'Mobile App Design',
       desc: 'Creating pixel-perfect app interfaces optimized for both iOS and Android devices with smooth usability.',
-      projects: '21 Projects',
+      projects: 'Responsive product screens',
       icon: <Smartphone className='h-6 w-6 text-green-400' />,
     },
     {
       title: 'Product Launch Strategy',
       desc: 'Helping startups prepare their digital products for launch with design systems, marketing pages, and assets.',
-      projects: '15 Projects',
+      projects: 'Launch-ready web assets',
       icon: <Rocket className='h-6 w-6 text-green-400' />,
     },
   ];

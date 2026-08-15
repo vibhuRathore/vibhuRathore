@@ -10,7 +10,8 @@ const Resume = () => {
 
             <SectionHeader subtitle="" title="Education and practical experience" />
 
-            <motion.p variants={fadeUp} className="mt-4 text-neutral-">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis blanditiis porro consequuntur vel, tenetur officiis rem recusandae laborum suscipit deleniti aspernatur repudiandae aliquid, reprehenderit voluptate asperiores culpa alias. Consequatur, suscipit.
+            <motion.p variants={fadeUp} className="mt-4 text-muted-foreground">
+                A concise view of my engineering education and hands-on full-stack work across React, Node.js, API integrations, and production-focused web applications.
             </motion.p>
 
             <div className="grid gap-x-10 my-16 md:grid-cols-2">
