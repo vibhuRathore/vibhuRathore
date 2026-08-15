@@ -8,9 +8,9 @@ const Hero = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
-      className='pt-15'
+      className='pt-10'
       id='hero'
     >
       <motion.p

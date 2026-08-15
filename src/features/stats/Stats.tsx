@@ -7,9 +7,9 @@ const Stats = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.8 }}
-      variants={staggerContainer(0.6)}
-      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-20'
+      viewport={{ once: true, amount: 0.35 }}
+      variants={staggerContainer(0.3)}
+      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-14'
     >
       {statsData.map((stat, i) => (
         <motion.div

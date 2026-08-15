@@ -9,16 +9,16 @@ const Tools = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
-      className='mt-30 scroll-mt-10'
+      className='mt-16 scroll-mt-10'
       id='tools'
     >
       <SectionHeader
         subtitle='Tools'
         title='Technologies I Work With'
       />
-      <div className='my-16'>
+      <div className='my-10'>
         <motion.h2
           variants={fadeUp}
           className='text-3xl font-semibold mb-8 capitalize'
@@ -29,8 +29,8 @@ const Tools = () => {
         <motion.div
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer(0.5)}
+          viewport={{ once: true, amount: 0.15 }}
+          variants={staggerContainer(0.3)}
           className='grid grid-cols-2 gap-5 sm:grid-cols-3'
         >
           {tools.map((tool, i) => (

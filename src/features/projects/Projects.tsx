@@ -9,9 +9,9 @@ const Projects = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
-      className='mt-30 scroll-mt-10'
+      className='mt-16 scroll-mt-10'
       id='projects'
     >
       <SectionHeader
@@ -22,9 +22,9 @@ const Projects = () => {
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.3 }}
-        variants={staggerContainer(0.5)}
-        className='grid md:grid-cols-2 gap-10 mt-10'
+        viewport={{ once: true, amount: 0.15 }}
+        variants={staggerContainer(0.3)}
+        className='grid md:grid-cols-2 gap-8 mt-8'
       >
         {projectsData.map((project) => (
           <ProjectCard

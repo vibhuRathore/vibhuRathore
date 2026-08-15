@@ -8,9 +8,9 @@ const About = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
-      className='mt-30 scroll-mt-10'
+      className='mt-16 scroll-mt-10'
       id='about'
     >
       <SectionHeader

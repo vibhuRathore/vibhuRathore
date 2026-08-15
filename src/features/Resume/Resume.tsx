@@ -9,9 +9,9 @@ const Resume = () => {
     <motion.section
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
-      className='mt-30 scroll-mt-10'
+      className='mt-16 scroll-mt-10'
       id='resume'
     >
       <SectionHeader
@@ -28,7 +28,7 @@ const Resume = () => {
         applications.
       </motion.p>
 
-      <div className='grid gap-x-10 my-16 md:grid-cols-2'>
+      <div className='grid gap-x-10 my-10 md:grid-cols-2'>
         <motion.div
           variants={fadeUp}
           className='mb-16 md:mb-0'
