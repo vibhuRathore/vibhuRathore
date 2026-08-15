@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vibhurathore.github.io/vibhuRathore/sitemap.xml

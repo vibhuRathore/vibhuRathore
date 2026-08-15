@@ -7,6 +7,8 @@ import type { JSX } from 'react';
 
 export type ProjectType = {
   imgSrc: string;
+  imageWidth: number;
+  imageHeight: number;
   title: string;
   desc: string;
   tags: string[];

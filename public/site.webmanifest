@@ -1,0 +1,21 @@
+{
+  "name": "Vibhu Rathore Portfolio",
+  "short_name": "Vibhu Rathore",
+  "description": "Portfolio of Vibhu Rathore, Full Stack Engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111513",
+  "theme_color": "#30b864",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { fadeUp } from "@/lib/animations"
 const ToolsCard = ({tool} : {tool:ToolsType}) => {
   return (
     <motion.div variants={fadeUp} className="border border-border bg-card rounded-md flex justify-center items-center flex-col py-4">
-       <img src={tool.imgSrc} alt={`${tool.label} logo`} />
+       <img src={tool.imgSrc} alt={`${tool.label} logo`} width={48} height={48} loading="lazy" decoding="async" />
        <p className="font-bold mt-2">{tool.label}</p>
     </motion.div>
   )
