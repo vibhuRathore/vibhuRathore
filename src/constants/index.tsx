@@ -1,11 +1,7 @@
 /**
  * Types
  */
-import type {
-  ExperienceType,
-  LinksType,
-  TestimonialsType,
-} from '@/types';
+import type { ExperienceType, LinksType, TestimonialsType } from '@/types';
 import { socialLinks } from './socials';
 
 /**
@@ -82,17 +78,10 @@ const experience: ExperienceType[] = [
     title: 'Full Stack Engineer',
     institute: 'GrayCell Technologies',
     desc: '',
-  }
+  },
 ];
-
 
 // TODO: replace with real client testimonials before enabling the section.
 const testimonials: TestimonialsType[] = [];
 
-export {
-  socialLinks,
-  education,
-  experience,
-  navLinks,
-  testimonials,
-};
+export { socialLinks, education, experience, navLinks, testimonials };
