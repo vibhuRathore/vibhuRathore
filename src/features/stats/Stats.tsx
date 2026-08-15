@@ -7,9 +7,9 @@ const Stats = () => {
     <motion.section initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.8 }} variants={staggerContainer(0.6)} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-20">
       {
         statsData.map((stat,i)=>(
-            <motion.div key={i} variants={fadeUp} className="border border-neutral-700 rounded-xl flex flex-col justify-center items-center py-6">
+            <motion.div key={i} variants={fadeUp} className="border border-border bg-card rounded-xl flex flex-col justify-center items-center py-6">
                <p className="text-4xl capitalize font-bold lining-nums">{stat.number}</p>
-               <p className="text-neutral-300">{stat.label}</p>
+               <p className="text-muted-foreground">{stat.label}</p>
             </motion.div>
         ))
       }

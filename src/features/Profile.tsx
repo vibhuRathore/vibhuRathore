@@ -1,13 +1,17 @@
 import { socialLinks } from "@/constants"
 import { Button } from "@/components/ui/button"
+import ThemeToggle from "@/components/ThemeToggle"
 
 const Profile = () => {
     return (
         <aside className="mx-4 my-6 max-w-[calc(100vw-2rem)] border border-border bg-card text-card-foreground p-5 rounded-lg sm:mx-6 sm:max-w-3xl sm:p-6 lg:sticky lg:left-0 lg:top-6 lg:w-96">
             <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1 text-center sm:flex-row sm:items-center sm:justify-center sm:gap-x-10 sm:text-left">
-                    <h1 className="text-3xl font-bold">Vibhu Rathore</h1>
-                    <p className="text-sm">Full Stack Engineer</p>
+                <div className="flex items-start justify-between gap-3">
+                    <div className="flex min-w-0 flex-col gap-1 text-left">
+                        <h1 className="text-3xl font-bold">Vibhu Rathore</h1>
+                        <p className="text-sm">Full Stack Engineer</p>
+                    </div>
+                    <ThemeToggle />
                 </div>
                 <img src='/Image.jpeg' alt="Vibhu Rathore portrait" width={610} height={800} loading="eager" decoding="async" className="w-full rounded-2xl object-cover" />
 

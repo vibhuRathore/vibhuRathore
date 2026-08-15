@@ -21,24 +21,74 @@ const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters."),
   email: z.string().trim().email("Enter a valid email address."),
   message: z.string().trim().min(10, "Message must be at least 10 characters."),
+  _gotcha: z.string().optional(),
 })
 
 type ContactFormValues = z.infer<typeof contactSchema>
+type SubmitStatus = {
+  type: "success" | "error"
+  message: string
+} | null
 
 const Contact = () => {
-  const [submitMessage, setSubmitMessage] = useState("")
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>(null)
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       email: "",
       message: "",
+      _gotcha: "",
     },
   })
 
-  const onSubmit = () => {
-    setSubmitMessage("Thanks. Your message is ready to be sent.")
-    form.reset()
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmitStatus(null)
+
+    if (values._gotcha) {
+      form.reset()
+      return
+    }
+
+    const formspreeFormId = import.meta.env.VITE_FORMSPREE_FORM_ID?.trim()
+
+    if (!formspreeFormId) {
+      setSubmitStatus({
+        type: "error",
+        message: "Contact delivery is not configured yet. Please try again later.",
+      })
+      return
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeFormId}`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Formspree request failed")
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Thanks. Your message has been delivered.",
+      })
+      form.reset()
+    } catch {
+      setSubmitStatus({
+        type: "error",
+        message: "Message delivery failed. Please try again.",
+      })
+    }
   }
 
   return (
@@ -54,6 +104,15 @@ const Contact = () => {
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="mt-10 grid gap-5">
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="sr-only"
+            {...form.register("_gotcha")}
+          />
+
           <FormField
             control={form.control}
             name="name"
@@ -96,14 +155,18 @@ const Contact = () => {
             )}
           />
 
-          {submitMessage ? (
-            <p className="text-sm text-primary" role="status">
-              {submitMessage}
+          {submitStatus ? (
+            <p
+              className={submitStatus.type === "success" ? "text-sm text-primary" : "text-sm text-destructive"}
+              role={submitStatus.type === "success" ? "status" : "alert"}
+              aria-live={submitStatus.type === "success" ? "polite" : "assertive"}
+            >
+              {submitStatus.message}
             </p>
           ) : null}
 
           <Button type="submit" className="w-fit" disabled={form.formState.isSubmitting}>
-            Send Message
+            {form.formState.isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
       </Form>

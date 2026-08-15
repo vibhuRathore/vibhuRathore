@@ -9,7 +9,7 @@ const About = () => {
 
       <SectionHeader subtitle="About" title="👋 Hi there !!!" />
 
-      <motion.p variants={fadeUp} className="mt-2 text-neutral-300">
+      <motion.p variants={fadeUp} className="mt-2 text-muted-foreground">
         I’m a passionate Full Stack Engineer with around 1 year of hands-on experience building and optimizing web applications that solve real-world problems. Currently, I’m working at Ficode Software Solutions, where I’m involved in developing high-performing applications, contributing to impactful projects, and continuously learning new technologies.<br /><br />
 
         🌟 What sets me apart?<br />
@@ -45,7 +45,9 @@ const About = () => {
       </motion.p>
 
       <motion.div variants={fadeUp} transition={{ delay: 0.2 }}>
-        <Button className="mt-5 cursor-pointer">Contact Me</Button>
+        <Button className="mt-5 cursor-pointer" asChild>
+          <a href="#contact">Contact Me</a>
+        </Button>
       </motion.div>
 
 
