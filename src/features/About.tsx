@@ -15,19 +15,24 @@ const About = () => {
     >
       <SectionHeader
         subtitle='About'
-        title='👋 Hi there !!!'
+        title='👋 Hi there!'
       />
 
       <motion.p
         variants={fadeUp}
         className='mt-2 text-muted-foreground'
       >
-        I’m a passionate Full Stack Engineer with around 1 year of hands-on
+        I’m a passionate Full Stack Engineer with around 1.5+ year of hands-on
         experience building and optimizing web applications that solve
         real-world problems. Currently, I’m working at Ficode Software
         Solutions, where I’m involved in developing high-performing
         applications, contributing to impactful projects, and continuously
         learning new technologies.
+        <br />
+        <br />
+        💡 My journey into full-stack development has been transformative —
+        blending creativity, logic, and performance-driven design to craft
+        solutions that truly make an impact.
         <br />
         <br />
         🌟 What sets me apart?
