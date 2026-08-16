@@ -1,5 +1,5 @@
 import { fadeUp } from '@/lib/animations';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import type { ProjectType } from '@/types';
 import { Button } from '@/components/ui/button';
 
@@ -12,10 +12,16 @@ const ProjectCard = ({
   desc,
   projectLink,
 }: ProjectType) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       variants={fadeUp}
-      className='relative'
+      whileHover={
+        shouldReduceMotion ? undefined : { y: -6, rotateX: 1.5, rotateY: -1.5 }
+      }
+      transition={{ type: 'spring', stiffness: 260, damping: 24 }}
+      className='relative transform-gpu'
     >
       <figure className='relative overflow-hidden rounded-md'>
         <img
