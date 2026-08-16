@@ -13,7 +13,6 @@ import {
   GraduationCap,
   Home,
   Mail,
-  Settings,
   User,
   Wrench,
 } from 'lucide-react';
@@ -26,11 +25,6 @@ const navLinks: LinksType[] = [
     icon: Briefcase,
   },
   { label: 'About', link: '#about', icon: User },
-  {
-    label: 'Services',
-    link: '#services',
-    icon: Settings,
-  },
   { label: 'Experience', link: '#experience', icon: FileText },
   { label: 'Education', link: '#education', icon: GraduationCap },
   {
