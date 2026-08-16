@@ -19,7 +19,8 @@ export type ExperienceType = {
   year: string;
   title: string;
   institute: string;
-  desc: string;
+  desc?: string;
+  bullets?: string[];
 };
 
 export type ServiceType = {
@@ -30,8 +31,20 @@ export type ServiceType = {
 };
 
 export type ToolsType = {
-  imgSrc: string;
-  label: string;
+  category: string;
+  items: {
+    label: string;
+    icon:
+      | {
+          type: 'simple';
+          path: string;
+          hex: string;
+        }
+      | {
+          type: 'image';
+          src: string;
+        };
+  }[];
 };
 
 export type StatsType = {

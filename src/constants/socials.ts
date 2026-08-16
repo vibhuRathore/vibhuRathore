@@ -1,26 +1,20 @@
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import type { LinksType } from '@/types';
 
-// TODO: add real profile URLs before enabling these links.
 export const socialLinks: LinksType[] = [
   {
-    icon: Facebook,
-    label: 'Facebook',
-    link: '',
+    icon: Github,
+    label: 'GitHub',
+    link: 'https://github.com/vibhuRathore',
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/vibhuRathore/',
   },
   {
     icon: Instagram,
     label: 'Instagram',
-    link: '',
-  },
-  {
-    icon: Twitter,
-    label: 'Twitter',
-    link: '',
-  },
-  {
-    icon: Youtube,
-    label: 'Youtube',
     link: '',
   },
 ];

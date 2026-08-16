@@ -14,6 +14,18 @@ const EducationCard = ({ item }: { item: ExperienceType }) => {
       <p className='text-sm text-neutral-400 mb-1 font-medium text-foreground'>
         {item.institute}
       </p>
+      {item.bullets ? (
+        <ul className='mt-3 space-y-2 text-sm text-muted-foreground'>
+          {item.bullets.map((bullet) => (
+            <li
+              key={bullet}
+              className='list-disc ml-4'
+            >
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 };

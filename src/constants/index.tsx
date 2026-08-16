@@ -10,6 +10,7 @@ import { socialLinks } from './socials';
 import {
   Briefcase,
   FileText,
+  GraduationCap,
   Home,
   Mail,
   Settings,
@@ -30,9 +31,10 @@ const navLinks: LinksType[] = [
     link: '#services',
     icon: Settings,
   },
-  { label: 'Resume', link: '#resume', icon: FileText },
+  { label: 'Experience', link: '#experience', icon: FileText },
+  { label: 'Education', link: '#education', icon: GraduationCap },
   {
-    label: 'Tools',
+    label: 'Skills',
     link: '#tools',
     icon: Wrench,
   },
@@ -41,43 +43,35 @@ const navLinks: LinksType[] = [
 
 const education: ExperienceType[] = [
   {
-    year: '2019 – 2024',
-    title: 'Bachelor of Engineering',
-    institute: 'Computer Science & Engineering ( Internet of things)',
-    desc: '',
-  },
-  {
-    year: '2018 – 2019',
-    title: 'Intermediate',
-    institute: 'Spring Fields College, Moradabad, Uttar Pradesh',
-    desc: '',
-  },
-  {
-    year: '2016-2017',
-    title: 'Matriculation',
-    institute: 'Spring Fields College, Moradabad, Uttar Pradesh',
-    desc: '',
+    year: '2019 – 2023',
+    title: 'B.E./B.Tech Computer Science and Engineering',
+    institute: 'Chandigarh University',
   },
 ];
 
 const experience: ExperienceType[] = [
   {
     year: 'Sept 2025 – Present',
-    title: 'Full Stack Engineer',
+    title: 'Full Stack Developer',
     institute: 'Ficode India',
-    desc: '',
+    bullets: [
+      'Contributed to a large-scale veterinary surgery simulation platform serving 8,000-10,000 users, built using TypeScript, 7 independent microservices, and distributed systems principles.',
+      'Designed and developed scalable RESTful APIs using Node.js and Express to power core platform functionality.',
+      'Owned Single Sign-On (SSO) implementation using SurfConext, with JWT-based token propagation and secure session lifecycle management.',
+      'Contributed to migrating monolithic deployment to AWS EC2, S3, CloudFront, SES, and Secrets Manager, reducing deployment time by 40% via a GitHub Actions CI/CD pipeline.',
+      'Containerized Redis using Docker to manage caching across microservices, improving repeated data retrieval performance and simplifying local development setup.',
+      'Owned iOS and macOS delivery using Capacitor and Electron, implementing jailbreak detection for clinical security compliance and resolving critical shutdown bugs.',
+    ],
   },
   {
-    year: 'Aug 2024 – April 2025',
-    title: 'Full Stack Engineer',
-    institute: 'Freelance / Remote Work',
-    desc: '',
-  },
-  {
-    year: 'Jan 2024 – July 2024',
-    title: 'Full Stack Engineer',
+    year: 'Jan 2024 – June 2024',
+    title: 'Full Stack Developer',
     institute: 'GrayCell Technologies',
-    desc: '',
+    bullets: [
+      'Refactored API response handling and optimized SQL Server query performance, reducing average response times by 25% across core application endpoints.',
+      'Established a structured debugging and triage workflow for production incidents, cutting average resolution time by 40%.',
+      'Delivered 15+ features in collaboration with cross-functional teams, consistently meeting sprint deadlines in an Agile development environment.',
+    ],
   },
 ];
 

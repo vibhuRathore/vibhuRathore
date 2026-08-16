@@ -15,31 +15,34 @@ const Tools = () => {
       id='tools'
     >
       <SectionHeader
-        subtitle='Tools'
-        title='Technologies I Work With'
+        subtitle='Skills'
+        title='Technical Skills'
       />
       <div className='my-10'>
-        <motion.h2
-          variants={fadeUp}
-          className='text-3xl font-semibold mb-8 capitalize'
-        >
-          Tech I like to work with :
-        </motion.h2>
+        {tools.map((group) => (
+          <motion.div
+            key={group.category}
+            variants={fadeUp}
+            className='mb-8 last:mb-0'
+          >
+            <h2 className='text-2xl font-semibold mb-4'>{group.category}</h2>
 
-        <motion.div
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, amount: 0.15 }}
-          variants={staggerContainer(0.3)}
-          className='grid grid-cols-2 gap-5 sm:grid-cols-3'
-        >
-          {tools.map((tool, i) => (
-            <ToolsCard
-              key={i}
-              tool={tool}
-            />
-          ))}
-        </motion.div>
+            <motion.div
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.15 }}
+              variants={staggerContainer(0.12)}
+              className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'
+            >
+              {group.items.map((tool) => (
+                <ToolsCard
+                  key={tool.label}
+                  tool={tool}
+                />
+              ))}
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );

@@ -2,9 +2,20 @@ import { motion } from 'motion/react';
 import { fadeUp, staggerContainer } from '@/lib/animations';
 import SectionHeader from '@/components/SectionHeader';
 import { education, experience } from '@/constants';
+import type { ExperienceType } from '@/types';
 import EducationCard from './EducationCard';
 
-const Resume = () => {
+const TimelineSection = ({
+  id,
+  subtitle,
+  title,
+  items,
+}: {
+  id: string;
+  subtitle: string;
+  title: string;
+  items: ExperienceType[];
+}) => {
   return (
     <motion.section
       initial='hidden'
@@ -12,56 +23,44 @@ const Resume = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer(0)}
       className='mt-16 scroll-mt-10'
-      id='resume'
+      id={id}
     >
       <SectionHeader
-        subtitle='Resume'
-        title='Education and practical experience'
+        subtitle={subtitle}
+        title={title}
       />
 
-      <motion.p
+      <motion.div
         variants={fadeUp}
-        className='mt-4 text-muted-foreground'
+        className='my-10 space-y-8 border-l border-border pl-6'
       >
-        A concise view of my engineering education and hands-on full-stack work
-        across React, Node.js, API integrations, and production-focused web
-        applications.
-      </motion.p>
-
-      <div className='grid gap-x-10 my-10 md:grid-cols-2'>
-        <motion.div
-          variants={fadeUp}
-          className='mb-16 md:mb-0'
-        >
-          <h2 className='text-3xl font-semibold mb-8'>Education</h2>
-
-          <div className='space-y-8 border-l border-border pl-6'>
-            {education.map((item, i) => (
-              <EducationCard
-                item={item}
-                key={i}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={fadeUp}
-          className=''
-        >
-          <h2 className='text-3xl font-semibold mb-8'>Work Experience</h2>
-
-          <div className='space-y-8 border-l border-border pl-6'>
-            {experience.map((item, i) => (
-              <EducationCard
-                item={item}
-                key={i}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </div>
+        {items.map((item) => (
+          <EducationCard
+            item={item}
+            key={`${item.year}-${item.title}`}
+          />
+        ))}
+      </motion.div>
     </motion.section>
+  );
+};
+
+const Resume = () => {
+  return (
+    <>
+      <TimelineSection
+        id='experience'
+        subtitle='Experience'
+        title='Professional Experience'
+        items={experience}
+      />
+      <TimelineSection
+        id='education'
+        subtitle='Education'
+        title='Education'
+        items={education}
+      />
+    </>
   );
 };
 
