@@ -4,7 +4,7 @@ import Stats from './features/stats/Stats';
 import About from './features/About';
 import Resume from './features/Resume/Resume';
 import Tools from './features/Tools/Tool';
-import Services from './features/Services/Services';
+//import Services from './features/Services/Services';
 import Contact from './features/Contact';
 import Testimonials from './features/Testimonials';
 
@@ -17,7 +17,7 @@ const App = () => {
       <Stats />
       <Projects />
       <About />
-      <Services />
+      {/* <Services /> */}
       <Resume />
       <Tools />
       {SHOW_TESTIMONIALS ? <Testimonials /> : null}
